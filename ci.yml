@@ -11,8 +11,8 @@ jobs:
   autogreen:
     runs-on: ubuntu-latest
     
-   # permissions:
-   #   contents: read/write 
+    permissions:
+      contents: read/write 
     permissions:
       contents: write
   
@@ -22,8 +22,8 @@ jobs:
 
       - name: Auto green
         run: |
-          git config --local user.email "cdncomco@gmail.com"
-          git config --local user.name "cdncomco"
+          git config --local user.email "zhuxintao8@gmail.com"
+          git config --local user.name "XZto502"
           git remote set-url origin https://${{ github.actor }}:${{ secrets.GITHUB_TOKEN }}@github.com/${{ github.repository }}
           git pull --rebase
           git commit --allow-empty -m "a commit a day keeps your girlfriend away"
